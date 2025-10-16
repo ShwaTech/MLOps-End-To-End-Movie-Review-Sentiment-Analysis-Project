@@ -6,13 +6,9 @@ Project Organization
 
 ------------
 
-.
-├── LICENSE
-├── Makefile
-├── README.md
-├── requirements.txt
-├── setup.py
-├── tox.ini
+```bash
+├── .circleci/
+│   └── config.yml
 │
 ├── data
 │   ├── external/
@@ -23,7 +19,7 @@ Project Organization
 ├── docs/
 │
 ├── models/
-│   └── trained_models/           # logged or saved ML models (linked with MLflow)
+│   └── trained_models/
 │
 ├── notebooks/
 │   ├── exp1.ipynb
@@ -43,6 +39,9 @@ Project Organization
 │   │
 │   ├── features/
 │   │   └── build_features.py
+│   │
+│   ├── logger/
+│   │   └── __init__.py
 │   │
 │   ├── models/
 │   │   ├── train_model.py
@@ -107,12 +106,18 @@ Project Organization
 │   │   └── s3_bucket/
 │   │       ├── main.tf
 │   │       ├── variables.tf
-│   │       └── outputs.tf
+│   └───────└── outputs.tf
 │
-├── .circleci/
-│   └── config.yml
-│
+├── LICENSE
+├── Makefile
+├── README.md
+├── requirements.txt
+├── setup.py
+├── tox.ini
 ├── Dockerfile
 ├── deployment.yaml
 ├── dvc.yaml
 └── params.yaml
+```
+
+## For That Project Guidance -> Do not Forget to Look at [Project-Flow.txt](./Project-Flow.txt)
