@@ -1,0 +1,2 @@
+# MLOps-End-to-End-Movie-Review-Sentiment-Analysis-Project
+End-To-End Movie-review-Sentiment-Analysis with MLflow &amp; DagsHub for experiment tracking, DVC for data versioning, model building &amp; and pushing to S3 storage, Terraform IaC, and CircleCI CI/CD, Kubernetes deployment for model serving, prometheus and grafana for alerting and monitoring creating a scalable, automated, and reproducible MLOps workflow.
