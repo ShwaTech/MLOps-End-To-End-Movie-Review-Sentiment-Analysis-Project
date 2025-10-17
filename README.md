@@ -34,33 +34,29 @@ Project Organization
 ├── src/
 │   ├── __init__.py
 │   │
-│   ├── data/
-│   │   └── make_dataset.py
-│   │
-│   ├── features/
-│   │   └── build_features.py
-│   │
-│   ├── logger/
-│   │   └── __init__.py
-│   │
-│   ├── models/
-│   │   ├── train_model.py
-│   │   ├── predict_model.py
-│   │   └── evaluation_utils.py
-│   │
-│   ├── visualization/
-│   │   └── visualize.py
-│   │
 │   ├── connections/
 │   │   ├── __init__.py
 │   │   ├── config.json
 │   │   ├── s3_connection.py
 │   │   └── ssms_connection.py
 │   │
-│   └── pipelines/
-│       ├── __init__.py
-│       ├── data_pipeline.py
-│       └── model_pipeline.py
+│   ├── data/
+│   │   ├── data_ingestion.py
+│   │   └── data_preprocessing.py
+│   │
+│   ├── features/
+│   │   └── feature_engineering.py
+│   │
+│   ├── model/
+│   │   ├── model_building.py
+│   │   ├── model_evaluation.py
+│   │   └── register_model.py
+│   │
+│   ├── logger/
+│   │   └── __init__.py
+│   │
+│   └── visualization/
+│       └── visualize.py
 │
 ├── flask_app/
 │   ├── app.py
@@ -83,30 +79,30 @@ Project Organization
 │   │   ├── dev.tfvars
 │   │   └── prod.tfvars
 │   │
-│   ├── modules/
-│   │   ├── iam/
-│   │   │   ├── main.tf
-│   │   │   ├── variables.tf
-│   │   │   ├── outputs.tf
-│   │   │   └── ci_cd/
-│   │   │       ├── main.tf
-│   │   │       ├── variables.tf
-│   │   │       └── outputs.tf
-│   │   │
-│   │   ├── ec2/
-│   │   │   ├── main.tf
-│   │   │   ├── variables.tf
-│   │   │   └── outputs.tf
-│   │   │
-│   │   ├── ecr/
-│   │   │   ├── main.tf
-│   │   │   ├── variables.tf
-│   │   │   └── outputs.tf
-│   │   │
-│   │   └── s3_bucket/
-│   │       ├── main.tf
-│   │       ├── variables.tf
-│   └───────└── outputs.tf
+│   └── modules/
+│       ├── iam/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   ├── outputs.tf
+│       │   └── ci_cd/
+│       │       ├── main.tf
+│       │       ├── variables.tf
+│       │       └── outputs.tf
+│       │
+│       ├── ec2/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       │
+│       ├── ecr/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       │
+│       └── s3_bucket/
+│           ├── main.tf
+│           ├── variables.tf
+│           └── outputs.tf
 │
 ├── LICENSE
 ├── Makefile
