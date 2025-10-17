@@ -9,6 +9,10 @@ __pycache__/
 secrets/
 local_s3/
 
+terraform/.terraform/
+terraform/bootstrap/.terraform/
+terraform/bootstrap/terraform.tfstate
+
 
 # Distribution / packaging
 .Python
