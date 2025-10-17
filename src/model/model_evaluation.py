@@ -119,6 +119,9 @@ def main():
     mlflow.set_experiment("Shwa-dvc-pipeline")
     with mlflow.start_run() as run:  # Start an MLflow run
         try:
+            # ✅ Ensure base output directories exist early
+            os.makedirs("reports", exist_ok=True)
+            
             clf = load_model('./models/model.pkl')
             test_data = load_data('./data/processed/test_bow.csv')
             
