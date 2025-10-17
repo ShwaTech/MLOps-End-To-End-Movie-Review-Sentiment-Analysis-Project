@@ -55,6 +55,13 @@ Project Organization
 │   ├── logger/
 │   │   └── __init__.py
 │   │
+│   ├── scripts/
+│   │   └── promote_model.py
+│   │
+│   ├── tests/
+│   │   ├── test_flask_app.py
+│   │   └── test_model.py
+│   │
 │   └── visualization/
 │       └── visualize.py
 │

@@ -29,3 +29,15 @@ jobs:
       - run:
           name: Run pipeline
           command: dvc repro
+
+      - run:
+          name: Run model tests
+          command: python -m unittest tests/test_model.py
+
+      - run:
+          name: Promote model to production
+          command: python scripts/promote_model.py
+
+      - run:
+          name: Run Flask app tests
+          command: python -m unittest tests/test_flask_app.py
