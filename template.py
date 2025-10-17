@@ -33,6 +33,7 @@ list_of_files = [
     "src/logger/__init__.py",
     "src/data/data_ingestion.py",
     "src/data/data_preprocessing.py",
+    "src/features/feature_engineering.py",
     "flask_app/app.py",
     "flask_app/templates/index.html",
     "flask_app/load_model_test.py",
