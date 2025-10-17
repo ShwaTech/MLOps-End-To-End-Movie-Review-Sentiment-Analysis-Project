@@ -81,6 +81,7 @@ def normalize_text(text):
 
 ## Below code block is for production use
 ## -------------------------------------------------------------------------------------
+
 # Set up DagsHub credentials for MLflow tracking
 dagshub_token = os.getenv("DAGSHUB_API_KEY")
 if not dagshub_token:
@@ -95,13 +96,16 @@ repo_name = "MLOps-End-To-End-Movie-Review-Sentiment-Analysis-Project"
 
 # Set up MLflow tracking URI
 mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
+
 ## -------------------------------------------------------------------------------------
 
 
 ## Below code block is for local use
 ## -------------------------------------------------------------------------------------
+
 # mlflow.set_tracking_uri('https://dagshub.com/ShwaTech/MLOps-End-To-End-Movie-Review-Sentiment-Analysis-Project.mlflow')
 # dagshub.init(repo_owner='ShwaTech', repo_name='MLOps-End-To-End-Movie-Review-Sentiment-Analysis-Project', mlflow=True)
+
 ## -------------------------------------------------------------------------------------
 
 
