@@ -41,6 +41,7 @@ list_of_files = [
     "flask_app/templates/index.html",
     "flask_app/load_model_test.py",
     "flask_app/preprocessing_utility.py",
+    "flask_app/requirements.txt",
     "notebooks/exp1.ipynb",
     "notebooks/exp2_bow_vs_tfidf.py",
     "notebooks/exp3_lor_bow_hp.py",
