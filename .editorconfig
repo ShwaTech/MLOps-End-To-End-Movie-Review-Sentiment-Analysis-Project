@@ -25,3 +25,10 @@ indent_size = 2
 
 [.circleci/*]
 indent_size = 2
+
+[dvc.yaml]
+indent_size = 2
+
+[params.yaml]
+indent_size = 2
+
