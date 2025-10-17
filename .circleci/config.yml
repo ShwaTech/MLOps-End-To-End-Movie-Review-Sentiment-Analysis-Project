@@ -27,10 +27,5 @@ jobs:
             - ~/.cache/pip
 
       - run:
-          name: Configure DVC and pull data
-          command: |
-            dvc pull
-
-      - run:
           name: Run pipeline
           command: dvc repro
