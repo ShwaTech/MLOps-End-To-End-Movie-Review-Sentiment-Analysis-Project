@@ -1,0 +1,5 @@
+{
+    "circleci.persistedProjectSelection": [
+        "gh/ShwaTech/MLOps-End-To-End-Movie-Review-Sentiment-Analysis-Project"
+    ]
+}
