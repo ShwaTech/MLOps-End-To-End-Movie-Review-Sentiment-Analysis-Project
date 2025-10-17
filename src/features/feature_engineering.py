@@ -62,9 +62,8 @@ def apply_bow(train_data: pd.DataFrame, test_data: pd.DataFrame, max_features: i
         test_df = pd.DataFrame(X_test_bow.toarray())
         test_df['label'] = y_test
 
-        vectorizer_path = "models/vectorizer.pkl"
-        with open(vectorizer_path, "wb") as f:
-            pickle.dump(vectorizer, f)
+        pickle.dump(vectorizer, open('models/vectorizer.pkl', 'wb'))
+        
         logging.info('Bag of Words applied and data transformed')
 
         return train_df, test_df
@@ -86,6 +85,10 @@ def save_data(df: pd.DataFrame, file_path: str) -> None:
 
 def main():
     try:
+        # ✅ Ensure base output directories exist early
+        os.makedirs("models", exist_ok=True)
+        os.makedirs(os.path.join("data", "processed"), exist_ok=True)
+
         params = load_params('params.yaml')
         max_features = params['feature_engineering']['max_features']
         # max_features = 20
