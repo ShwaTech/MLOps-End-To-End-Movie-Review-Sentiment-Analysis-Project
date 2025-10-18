@@ -20,6 +20,11 @@ resource "aws_iam_user_policy_attachment" "ecr_access" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
 }
 
+resource "aws_iam_user_policy_attachment" "eks_cluster_access" {
+  user       = aws_iam_user.this.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+}
+
 # Access Key
 resource "aws_iam_access_key" "this" {
   user = aws_iam_user.this.name
