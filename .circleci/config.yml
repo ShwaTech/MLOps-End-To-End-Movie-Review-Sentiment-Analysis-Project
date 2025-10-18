@@ -3,10 +3,10 @@ version: 2.1
 workflows:
   ci-pipeline:
     jobs:
-      - movie-review-pipeline
+      - moshwa-mlops-pipeline
 
 jobs:
-  movie-review-pipeline:
+  moshwa-mlops-pipeline:
     docker:
       - image: cimg/python:3.10
     steps:
@@ -89,7 +89,7 @@ jobs:
           name: Create Kubernetes Secret
           command: |
             kubectl create secret generic dagshub-token \
-              --from-literal=DAGSHUB_API_KEY=$DAGSHUB_API_KEY --dry-run=client -o yaml | kubectl apply -f - --validate=false
+              --from-literal=DAGSHUB_API_KEY=$DAGSHUB_API_KEY --dry-run=client -o yaml | kubectl apply -f -
 
       - run:
           name: Deploy to EKS

@@ -37,7 +37,9 @@ resource "aws_iam_policy" "eks_describe_cluster_policy" {
       {
         Effect = "Allow"
         Action = [
-          "eks:DescribeCluster"
+          "eks:DescribeCluster",
+          "eks:ListClusters",
+          "eks:AccessKubernetesApi"
         ]
         Resource = "arn:aws:eks:${var.region}:${data.aws_caller_identity.current.account_id}:cluster/${var.eks_cluster_name}"
       }
