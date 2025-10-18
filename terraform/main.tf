@@ -13,8 +13,10 @@ module "s3_bucket" {
 
 
 module "iam_user_ci_cd" {
-  source    = "./modules/iam/ci_cd"
-  user_name = var.iam_user_name_ci_cd
+  source           = "./modules/iam/ci_cd"
+  user_name        = var.iam_user_name_ci_cd
+  region           = var.region
+  eks_cluster_name = var.eks_cluster_name
 }
 
 

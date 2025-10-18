@@ -29,6 +29,18 @@ variable "iam_user_name_ci_cd" {
   type        = string
 }
 
+variable "region" {
+  description = "AWS region"
+  default     = "us-east-1"
+  type        = string
+}
+
+variable "eks_cluster_name" {
+  description = "EKS cluster name"
+  default     = "flask-app-cluster"
+  type        = string
+}
+
 # =================================================================================
 
 variable "ecr_repo_name" {
