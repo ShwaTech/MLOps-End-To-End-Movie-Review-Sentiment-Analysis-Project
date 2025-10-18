@@ -96,6 +96,16 @@ Project Organization
 │       │       ├── variables.tf
 │       │       └── outputs.tf
 │       │
+│       ├── ec2/
+│       │   ├── prometheus/
+│       │   │   ├── main.tf
+│       │   │   ├── variables.tf
+│       │   │   └── outputs.tf
+│       │   └── grafana/
+│       │       ├── main.tf
+│       │       ├── variables.tf
+│       │       └── outputs.tf
+│       │
 │       ├── ecr/
 │       │   ├── main.tf
 │       │   ├── variables.tf

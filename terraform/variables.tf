@@ -50,3 +50,66 @@ variable "ecr_repo_name" {
 
 # =================================================================================
 
+# Prometheus EC2 Server
+
+variable "prometheus_ec2_instance_name" {
+  description = "EC2 instance name"
+  type        = string
+}
+
+variable "prometheus_ec2_ami" {
+  description = "AMI ID for the EC2 instance"
+  type        = string
+}
+
+variable "prometheus_ec2_instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "prometheus_ec2_key_name" {
+  description = "Key pair name for EC2 instance"
+  type        = string
+}
+
+variable "prometheus_ec2_disk_size" {
+  description = "Disk size (in GB) for the EC2 instance"
+  type        = number
+  default     = 20
+}
+
+# =================================================================================
+
+# Grafana EC2 Server
+
+variable "grafana_ec2_instance_name" {
+  description = "EC2 instance name"
+  type        = string
+}
+
+variable "grafana_ec2_ami" {
+  description = "AMI ID for the EC2 instance"
+  type        = string
+}
+
+variable "grafana_ec2_instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "grafana_ec2_key_name" {
+  description = "Key pair name for EC2 instance"
+  type        = string
+}
+
+variable "grafana_ec2_disk_size" {
+  description = "Disk size (in GB) for the EC2 instance"
+  type        = number
+  default     = 20
+}
+
+# =================================================================================
+
+
