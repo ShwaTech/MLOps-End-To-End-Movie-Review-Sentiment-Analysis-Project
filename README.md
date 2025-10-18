@@ -96,11 +96,6 @@ Project Organization
 │       │       ├── variables.tf
 │       │       └── outputs.tf
 │       │
-│       ├── ec2/
-│       │   ├── main.tf
-│       │   ├── variables.tf
-│       │   └── outputs.tf
-│       │
 │       ├── ecr/
 │       │   ├── main.tf
 │       │   ├── variables.tf

@@ -3,6 +3,7 @@ variable "iam_user_name" {
   type        = string
 }
 
+# =================================================================================
 
 variable "s3_bucket_name" {
   description = "The name of the S3 bucket"
@@ -21,12 +22,19 @@ variable "block_public_policy" {
   default     = true
 }
 
+# =================================================================================
+
 variable "iam_user_name_ci_cd" {
   description = "IAM username for CI/CD operations"
   type        = string
 }
 
+# =================================================================================
+
 variable "ecr_repo_name" {
   description = "ECR repository name"
   type        = string
 }
+
+# =================================================================================
+

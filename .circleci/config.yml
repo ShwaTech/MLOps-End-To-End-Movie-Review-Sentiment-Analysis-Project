@@ -72,3 +72,25 @@ jobs:
       - run:
           name: Push Docker image to ECR
           command: docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:latest
+
+
+      - run:
+          name: Install kubectl
+          command: |
+            curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+            chmod +x kubectl
+            sudo mv kubectl /usr/local/bin/
+
+      - run:
+          name: Update kubeconfig
+          command: aws eks update-kubeconfig --region $AWS_REGION --name flask-app-cluster
+
+      - run:
+          name: Create Kubernetes Secret
+          command: |
+            kubectl create secret generic dagshub-token \
+              --from-literal=DAGSHUB_API_KEY=$DAGSHUB_API_KEY --dry-run=client -o yaml | kubectl apply -f -
+
+      - run:
+          name: Deploy to EKS
+          command: kubectl apply -f deployment.yaml
