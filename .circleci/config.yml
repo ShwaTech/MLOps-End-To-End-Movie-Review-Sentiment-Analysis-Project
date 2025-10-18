@@ -89,7 +89,7 @@ jobs:
           name: Create Kubernetes Secret
           command: |
             kubectl create secret generic dagshub-token \
-              --from-literal=DAGSHUB_API_KEY=$DAGSHUB_API_KEY --dry-run=client -o yaml | kubectl apply -f -
+              --from-literal=DAGSHUB_API_KEY=$DAGSHUB_API_KEY --dry-run=client -o yaml | kubectl apply -f - --validate=false
 
       - run:
           name: Deploy to EKS
