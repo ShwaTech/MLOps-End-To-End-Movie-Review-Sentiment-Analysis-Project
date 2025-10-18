@@ -11,3 +11,15 @@ module "s3_bucket" {
   block_public_policy = var.block_public_policy
 }
 
+
+module "iam_user_ci_cd" {
+  source    = "./modules/iam/ci_cd"
+  user_name = var.iam_user_name_ci_cd
+}
+
+
+module "ecr_repo" {
+  source    = "./modules/ecr"
+  repo_name = var.ecr_repo_name
+}
+
